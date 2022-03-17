@@ -1,0 +1,136 @@
+.leef_island {
+  width: 90%;
+  margin: 0 auto;
+  display: block;
+}
+.leef_island_video {
+  width: 100%;
+  mix-blend-mode: lighten;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+  position: relative;
+  align-items: flex-start;
+}
+
+/* .cards::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../../assets/images/globe.png);
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: -1;
+} */
+
+.fullscreen_bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -100;
+}
+
+.fullscreen_bg__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0.5;
+}
+
+.islandCardWrapper {
+  height: 100%;
+}
+
+.islandCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  background: linear-gradient(
+    46deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0.08) 70.72%
+  );
+  box-shadow: inset -2px 3px 3px rgba(152, 89, 36, 0.15),
+    inset 2px -3px 3px rgba(152, 89, 36, 0.15);
+  border-radius: 8px;
+  padding: 48px 22px;
+}
+
+.stats {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.btn {
+  position: absolute;
+  bottom: 4%;
+  left: 8%;
+}
+
+.downloadButtons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.downloadButtons > :not(:last-child) {
+  margin-right: 16px;
+}
+
+@media (max-width: 1000px) {
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .islandCard {
+    padding: 48px 18px;
+  }
+}
+@media (max-width: 760px) {
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+  }
+
+  .islandCard img {
+    width: 100%;
+  }
+
+  .stats {
+    flex-direction: column;
+  }
+
+  .stats > :not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  .downloadButtons img {
+    width: 150px;
+  }
+}
+
+@media (max-width: 500px) {
+  .downloadButtons a {
+    flex: 1;
+  }
+  .downloadButtons img {
+    width: 100%;
+  }
+}

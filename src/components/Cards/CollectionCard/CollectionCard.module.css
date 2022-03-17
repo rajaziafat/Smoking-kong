@@ -1,0 +1,17 @@
+.card {
+  width: 100%;
+  background: linear-gradient(
+    46deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0.08) 70.72%
+  );
+  box-shadow: inset -2px 3px 3px rgba(34, 255, 255, 0.1),
+    inset 2px -3px 3px rgba(232, 90, 255, 0.15);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+}
+
+.card img {
+  border-radius: 16px;
+}

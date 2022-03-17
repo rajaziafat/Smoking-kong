@@ -1,0 +1,62 @@
+.accordionWrapper {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+.accordionButton {
+  padding: 24px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.accordionButton > :not(:last-child) {
+  margin-right: 1rem;
+}
+
+.accordionBody {
+  padding: 24px;
+  padding-top: 0;
+}
+
+.toggleSign {
+  position: relative;
+  min-width: 25px;
+  height: 25px;
+}
+
+.toggleSign::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 2px;
+  border-radius: 1px;
+  background-color: white;
+  transition: all 0.2s ease;
+}
+.toggleSign::after {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  border-radius: 1px;
+  background-color: white;
+  transition: all 0.2s ease;
+}
+
+.toggleSign.open::after {
+  opacity: 0;
+}
+
+.accordionBodyWrapper {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}

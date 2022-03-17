@@ -1,0 +1,126 @@
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.left {
+  width: fit-content;
+}
+.right {
+  max-width: 518px !important;
+  width: 100%;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 2;
+  padding: 48px 45px;
+}
+
+.right::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(4px);
+  z-index: -1;
+}
+
+.downDate {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sale {
+  display: flex;
+  align-items: center;
+}
+
+.sale > :not(:last-child) {
+  margin-right: 5px;
+}
+
+.points > :not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.nftImg {
+  max-width: 403px;
+  width: 100%;
+}
+
+.leftBtn {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: -15%;
+}
+
+.islandCardImg1 {
+  max-width: 424px;
+  margin-top: -50%;
+  margin-left: 20%;
+}
+
+@media (max-width: 12000px) {
+  .right {
+    max-width: 460px;
+    padding: 38px 35px;
+  }
+
+  .leftBtn {
+    justify-content: center;
+    margin-right: 0%;
+    margin-bottom: 2rem;
+  }
+
+  .left {
+    /* border: 2px solid red; */
+    margin-right: 2rem;
+  }
+
+  .islandCardImg1 {
+    max-width: auto;
+    width: 100%;
+    margin-top: -40%;
+    margin-left: 0%;
+  }
+
+  .nftImg {
+    max-width: 380px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 1000px) {
+  .left {
+    margin-right: 0rem;
+    margin-top: 4rem;
+  }
+
+  .section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column-reverse;
+  }
+}
+
+@media (max-width: 500px) {
+  .right {
+    max-width: 518px;
+    width: 100%;
+    padding: 0 0;
+  }
+
+  .right::before {
+    display: none;
+  }
+
+  .calendar {
+    width: 46px;
+  }
+}

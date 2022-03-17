@@ -1,0 +1,220 @@
+.cards {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 400px;
+}
+
+.cards > :first-child {
+  margin-left: 9.5%;
+}
+.cards > :first-child .content::before {
+  left: -44%;
+  width: calc(100% + 44%);
+}
+
+.RoadmapCard {
+  /* border: 2px solid blue; */
+  position: relative;
+  flex: 1;
+}
+
+.profile {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  /* border: 2px solid red; */
+}
+
+.content {
+  display: flex;
+  align-items: flex-start;
+  padding-top: 4rem;
+  position: relative;
+  padding-right: 3rem;
+  padding-left: 6%;
+}
+
+.content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.3);
+  z-index: -1;
+}
+
+.line {
+  margin-right: 35px;
+  min-width: 3px;
+  height: 67.07px;
+  background: linear-gradient(180deg, #e85aff 0%, #22ffff 100%);
+  margin-top: 0.5rem;
+}
+
+.points {
+  padding-left: 1.4em;
+}
+
+.imgCircle {
+  border: 4px solid white;
+  background-color: black;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.RoadmapCard.active .imgCircle {
+  background-color: var(--pink);
+}
+
+.circleAndLine {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  margin-bottom: -20px;
+  position: relative;
+}
+
+.imgLine {
+  width: 5px;
+  height: 63px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    linear-gradient(180deg, rgba(250, 97, 244, 0) 0%, #fa61f4 100%);
+}
+
+.RoadmapCard.active .imgLine {
+  height: 117px;
+}
+
+.avatar {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 140px;
+  height: 140px;
+  background: linear-gradient(
+    46deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0.08) 70.72%
+  );
+  box-shadow: inset -2px 3px 3px rgba(152, 89, 36, 0.15),
+    inset 2px -3px 3px rgba(152, 89, 36, 0.15);
+  border-radius: 50%;
+  padding: 1rem;
+  /* margin-left: -50px; */
+}
+
+.RoadmapCard.active .avatar {
+  width: 219px;
+  height: 219px;
+}
+
+@media (max-width: 1200px) {
+  .cards {
+    margin-top: 350px;
+  }
+
+  .line {
+    margin-right: 30px;
+  }
+
+  .avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .RoadmapCard.active .avatar {
+    width: 170px;
+    height: 170px;
+  }
+  .imgLine {
+    height: 50px;
+  }
+
+  .RoadmapCard.active .imgLine {
+    height: 90px;
+  }
+
+  .content {
+    padding-top: 3rem;
+    padding-left: 9%;
+  }
+}
+
+@media (max-width: 900px) {
+  .cards {
+    margin-top: 0px;
+    flex-direction: column;
+    padding-right: 6%;
+    padding-left: 6%;
+  }
+  .avatar {
+    display: none;
+  }
+  .imgLine {
+    display: none;
+  }
+
+  .cards > :first-child {
+    margin-left: 0;
+  }
+  .cards > :first-child .content::before {
+    left: inherit;
+    width: inherit;
+  }
+
+  .RoadmapCard {
+    display: flex;
+  }
+
+  .content::before {
+    display: none;
+  }
+
+  .RoadmapCard {
+    width: 100%;
+  }
+
+  .content {
+    flex: 1;
+    padding-top: 0rem;
+    padding-left: 0%;
+    padding: 3rem 0;
+    padding-top: 0;
+    padding-left: 2rem;
+  }
+
+  .circleAndLine {
+    margin-bottom: 0px;
+  }
+
+  .profile {
+    position: relative;
+  }
+
+  .profile::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 50% !important;
+    width: 4px !important;
+    height: 100% !important;
+    background: rgba(255, 255, 255, 0.3);
+    z-index: -1;
+    transform: translateX(-50%);
+  }
+
+  .RoadmapCard:is(:last-child) .profile::before {
+    display: none;
+  }
+
+  .imgCircle {
+    width: 30px;
+    height: 30px;
+    margin-top: 0.3rem;
+  }
+}
